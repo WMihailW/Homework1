@@ -1,0 +1,49 @@
+.header {
+  grid-area: hd;
+  background-color: dodgerblue;
+  margin: 3px;
+}
+.footer {
+  grid-area: ft;
+  background-color: chartreuse;
+  margin: 3px;
+}
+.content {
+  grid-area: main;
+  background-color: aquamarine;
+  margin: 3px;
+}
+.sidebar {
+  grid-area: sd;
+  background-color: #d9480f;
+  margin: 3px;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(9, 3fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "hd hd hd hd   hd   hd   hd   hd   hd"
+    "sd sd sd main main main main main main"
+    "ft ft ft ft   ft   ft   ft   ft   ft";
+}
+/* * {
+  box-sizing: border-box;
+} */
+
+.wrapper {
+  border-radius: 5px;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.wrapper > div {
+  border: 1px solid #070605;
+  border-radius: 5px;
+  padding: 2em;
+  color: #d9480f;
+}
+.img {
+  display: block;
+  margin: 0 auto;
+}
